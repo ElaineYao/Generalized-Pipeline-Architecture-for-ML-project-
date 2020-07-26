@@ -27,7 +27,7 @@ def train(network_type, batch, epo):
         history = model.fit(x = x_train, y = y_train, validation_data = (x_val, y_val),
                          batch_size=int(batch),
                           epochs=int(epo))
-        # Calculate its accuracy on testing data
+        # Calculate its accuracy on validatioin data
         if network_type == 'traffic':
             _,acc = model.evaluate(x_val, y_val)
             print('The accuracy on the validation data is {}%.'.format(acc*100))
