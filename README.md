@@ -16,9 +16,10 @@ The path for the dataset will serve as the command line parameter when running t
   - `weather` -- the weather prediction project
 - **batch_size:** the batch_size for training, e.g. 64
 - **epochs:** the epochs for training, e.g. 10
+
 For example, `python file_reader.py .\dataset\train.csv | python preprocess.py weather | python train.py weather 64 10`
 
 # File Structure
-- **Pipe line:** This contains `file_reader.py`, `preprocess.py` and `train.py`. To see the dataflow, please refer to [Simulation of Real-time Traffic Prediction.](https://github.com/ElaineYao/Simulation-of-Real-time-Traffic-Prediction)
-- **Traffic Prediction:** This contains `utils_traffic.py`, `convert_traffic.py`, `network_traffic.py`. If the command line parameter - type - is traffic, the above functions will be called in the pipe line.
-- **Weather Prediction:** This contains `utils_weather.py`, `convert_weather.py`, `network_weather.py`. If the command line parameter - type - is weather, the above functions will be called in the pipe line.
+- **Pipeline:** This contains `file_reader.py`, `preprocess.py` and `train.py`. To see the dataflow, please refer to [Simulation of Real-time Traffic Prediction.](https://github.com/ElaineYao/Simulation-of-Real-time-Traffic-Prediction)
+- **Traffic Prediction:** This contains `utils_traffic.py`, `convert_traffic.py`, `network_traffic.py`. If the command line parameter -type - is 'traffic', the above functions will be called in the pipeline.
+- **Weather Prediction:** This contains `utils_weather.py`, `convert_weather.py`, `network_weather.py`. If the command line parameter - type - is 'weather', the above functions will be called in the pipeline.
