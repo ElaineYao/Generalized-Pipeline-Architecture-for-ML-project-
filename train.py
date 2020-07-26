@@ -1,5 +1,6 @@
 from utils import *
 from network_traffic import *
+from network_weather import *
 import pandas as pd
 import sys
 import json
@@ -19,7 +20,7 @@ def train(network_type, batch, epo):
         if network_type == 'traffic':
             model = network_traffic()
         elif network_type == 'weather':
-            print('**')
+            model = network_weather(x_train)
         else:
             print('Invalid network type -- ' + network_type)
 
@@ -27,9 +28,14 @@ def train(network_type, batch, epo):
                          batch_size=int(batch),
                           epochs=int(epo))
         # Calculate its accuracy on testing data
-        _,acc = model.evaluate(x_val, y_val)
-
-        print('The accuracy on the validation data is {}%.'.format(acc*100))
+        if network_type == 'traffic':
+            _,acc = model.evaluate(x_val, y_val)
+            print('The accuracy on the validation data is {}%.'.format(acc*100))
+        elif network_type == 'weather':
+            loss = model.evaluate(x_val, y_val)
+            print('The accuracy on the validation data is {}%.'.format((1-loss)*100))
+        else:
+            print('Invalid network type -- ' + network_type)
         # Save the model
         model.save('model1_10epoch.h5')
 
