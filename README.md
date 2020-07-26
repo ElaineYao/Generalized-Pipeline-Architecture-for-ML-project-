@@ -16,6 +16,7 @@ The path for the dataset will serve as the command line parameter when running t
   - `weather` -- the weather prediction project
 - **batch_size:** the batch_size for training, e.g. 64
 - **epochs:** the epochs for training, e.g. 10
+For example, `python file_reader.py .\dataset\train.csv | python preprocess.py weather | python train.py weather 64 10`
 
 # File Structure
 - **Pipe line:** This contains `file_reader.py`, `preprocess.py` and `train.py`. To see the dataflow, please refer to [Simulation of Real-time Traffic Prediction.](https://github.com/ElaineYao/Simulation-of-Real-time-Traffic-Prediction)
