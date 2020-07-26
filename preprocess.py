@@ -3,6 +3,7 @@ import pandas as pd
 import sys
 import json
 from convert_traffic import *
+from convert_weather import *
 
 def preprocess(convert_type):
     while True:
@@ -14,7 +15,7 @@ def preprocess(convert_type):
         if convert_type == 'traffic':
             outputDict = convert_traffic(input_temp)
         elif convert_type == 'weather':
-            print('**')
+            outputDict = convert_weather(input_temp)
         else:
             print('Invalid convert type -- '+convert_type)
         # Convert dict to JSON
