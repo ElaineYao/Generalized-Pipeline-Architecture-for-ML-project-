@@ -9,7 +9,9 @@ from utils import *
 
 def file_reader(datapath):
     df = pd.read_csv(datapath)
-    step = 10
+    # WARNING: When predicting the weather, the 'step' must be set at least larger than 1500
+    # due to the 'multivariate_data' function need some 'past_history' data to return the training data
+    step = 2000
     df_len = df.shape[0]
 
     for i in range(0,df_len,step):
