@@ -21,5 +21,5 @@ For example, `python file_reader.py .\dataset\train.csv | python preprocess.py w
 
 # File Structure
 - **Pipeline:** This contains `file_reader.py`, `preprocess.py` and `train.py`. To see the dataflow, please refer to [Simulation of Real-time Traffic Prediction.](https://github.com/ElaineYao/Simulation-of-Real-time-Traffic-Prediction)
-- **Traffic Prediction:** This contains `utils_traffic.py`, `convert_traffic.py`, `network_traffic.py`. If the command line parameter -type - is 'traffic', the above functions will be called in the pipeline.
-- **Weather Prediction:** This contains `utils_weather.py`, `convert_weather.py`, `network_weather.py`. If the command line parameter - type - is 'weather', the above functions will be called in the pipeline.
+- **Traffic Prediction:** This contains `utils_traffic.py`, `convert_traffic.py`, `network_traffic.py`. If the command-line argument -type - is 'traffic', the above functions will be called in the pipeline.
+- **Weather Prediction:** This contains `utils_weather.py`, `convert_weather.py`, `network_weather.py`. If the command-line argument - type - is 'weather', the above functions will be called in the pipeline.
